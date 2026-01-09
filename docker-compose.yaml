@@ -19,7 +19,7 @@ services:
       - filebrowser-database:/database
       - /var/lib/docker/volumes/vs0sgcog8k4og8wkg4ggg4sk-minecraft-server-data/_data:/files/minecraft
     environment:
-      - FB_DATABASE=/data/filebrowser.db
+      - FB_DATABASE=/database/filebrowser.db
       - FB_ROOT=/files
       - FB_PORT=8081
       - FB_ADDRESS=0.0.0.0
