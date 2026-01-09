@@ -1,6 +1,7 @@
 services:
   filebrowser:
     image: filebrowser/filebrowser:latest
+    user: "1000:1000"
     volumes:
       - /filebrowser/filebrowser.db:/database/filebrowser.db
       - filebrowser-data:/srv
