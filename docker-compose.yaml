@@ -1,6 +1,17 @@
 services:
-  template-filebrowser:
+  init-filebrowser:
+    image: filebrowser/filebrowser
+    entrypoint: sh -c
+    command:
+      - "chown -R 1000: /database"
+    restart: no
+    volumes:
+      - filebrowser-database:/database
+  filebrowser:
     image: filebrowser/filebrowser:latest
+    depends_on:
+      condition: service_completed_successfully
+    user: "1000:1000"
     volumes:
       - filebrowser-data:/srv
       - filebrowser-config:/config
