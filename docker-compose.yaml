@@ -16,7 +16,7 @@ services:
     volumes:
       - filebrowser-data:/srv
       - filebrowser-config:/config
-      - filebrowser-database:/data
+      - filebrowser-database:/database
       - /var/lib/docker/volumes/vs0sgcog8k4og8wkg4ggg4sk-minecraft-server-data/_data:/files/minecraft
     environment:
       - SERVICE_FQDN_FILEBROWSER_8081
